@@ -38,7 +38,7 @@ def main():
             for shot in shots:
                 if asteroid.collides_with(shot):
                     shot.kill()
-                    asteroid.kill()
+                    asteroid.split()
         for sprite in updatable:
             sprite.update(dt)
         pygame.display.flip()
